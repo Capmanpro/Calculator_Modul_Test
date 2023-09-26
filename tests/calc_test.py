@@ -38,7 +38,7 @@ class calcTest(TestCase):
             calc('1+2+3')
         self.assertEqual('Выражение должно содержать 2 целых числа и 1 знак!', e.exception.args[0])
 
-    def test_two_signs(self):
+    def test_dnum(self):
         with self.assertRaises(ValueError) as e:
             calc('1.1+2.2')
         self.assertEqual('Выражение должно содержать 2 целых числа и 1 знак!', e.exception.args[0])
